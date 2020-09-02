@@ -1,0 +1,88 @@
+<!-- <h1>Dictionary History Page.</h1> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>History</title>
+  <link rel="stylesheet" href="../src/css/reset.css">
+  <link rel="stylesheet" href="../src/css/history.css">
+</head>
+<body>
+  <div class="page">
+    <h1>Translation History</h1>
+    <div class="content">
+      <!-- 工具栏 -->
+      <div class="header">
+        <div class="tool-left">
+          <div class="tool list">
+            <div class="selection">
+              <div class="selection-title">
+                <span>List :</span>
+                <span class="selection-show">All</span>
+              </div>
+              <div class="options">
+                <div class="selection-title">
+                  <span>List :</span>
+                  <span class="selection-show">All</span>
+                </div>
+                <p class="option active" data-id='1' id='list-date'>All</p>
+              </div>              
+            </div>
+          </div>
+          <div class="tool sort">
+            <div class="selection">
+              <div class="selection-title">
+                <span>Sort :</span>
+                <span class="selection-show"></span>
+              </div>
+              <div class="options">
+                <div class="selection-title">
+                  <span>Sort :</span>
+                  <span class="selection-show"></span>
+                </div>
+                <p class="option" data-id='1' id='list-date'>Date</p>
+                <p class="option" data-id='2' id='list-alphabetic'>Alphabetic</p>
+              </div>              
+            </div>
+          </div>          
+        </div>
+        <div class="tool-right">
+          <div class="tool select">
+          </div>
+          <!-- <div class="tool move"></div> -->
+          <div class="tool delete"></div>
+          <div class="tool update"></div>
+        </div>
+      </div>
+      <!-- 历史列表 -->
+      <ul class="trans-list">
+        <!-- <li>
+          <p class="src">Chinese people</p>
+          <p class="dist">中国人</p>
+        </li>
+        <li>
+          <p class="src"> Londoners are under starter's orders as the city gets ready for the Olympic Games, which will begin one year today. </p>
+          <p class="dist">伦敦人正在为奥运会做准备，伦敦人正在接受首发的命令，奥运会将于今天开幕。</p>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+  <div class="tip">
+    <div class="mask"></div>
+    <div class="pan">
+      <p class="title">Tips</p>
+      <div class="txt">
+
+      </div>
+      <div class="btns">
+        <p class="btn cancel">cancle</p>
+      </div>
+    </div>
+  </div>
+  <script src="../src/lib/jquery.js"></script>
+  <script src='../src/js/const/api.js'></script>
+  <script src='../src/js/common.js'></script>
+  <script src="../src/js/history.js"></script>
+</body>
+</html>

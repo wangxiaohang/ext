@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../src/css/reset.css">
+    <link rel="stylesheet" href="../src/css/popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button class="fix-win-icon" id="unpin-btn"></button>
+            <div class="menu">
+                <button class="menu-icon"></button>
+                <div class="menu-panel slide-down">
+                    <!-- <button class="menu-item manage-voca-list" id="manage-vocabulary-list-btn">Manage Vocabulary List</button>
+                    <button class="menu-item set-default-voca-list" id="set-default-vocabulary-list-btn">Set Default Vocabulary List </button>
+                    <button class="menu-item manage-trans-list" id="manage-translation-list-btn">Manage Translation List</button>
+                    <button class="menu-item words-history" id="dictionary-history-btn">Dictionary History</button>
+                    <button class="menu-item trans-history" id="translation-history-btn">Translation History</button>
+                    <button class="menu-item night-mode" id="night-mode-btn">Night Mode</button>
+                    <button class="menu-item setting" id="setting-btn">Setting</button> -->
+                    <!-- <button class="menu-item set-default-voca-list" id="set-default-vocabulary-list-btn">Vocabulary List </button> -->
+                    <button class="menu-item words-history" id="dictionary-history-btn">History</button>
+                    <!-- <button class="menu-item night-mode" id="night-mode-btn">Night Mode</button> -->
+                    <button class="menu-item setting" id="setting-btn">Setting</button>
+                </div>
+            </div>
+            <div class="tabs">
+                <div id="dictionary-container" class="tab dictionary">
+                    <button class="tab-header dictionary">Dictionary</button>
+                    <div class="tab-content">
+                      <div class="search-panel">
+                          <div class="search">
+                            <input type="text" placeholder="Search">
+                            <div class="star"></div>
+                          </div>
+                          <div class="btns">
+                            <div data-api='self' class="search-in-self btn active"></div>
+                            <div data-api='google' class="search-in-google btn"></div>
+                            <div data-api='yandex' class="search-in-yandex btn"></div>
+                            <div data-api='baidu' class="search-in-baidu btn"></div>
+                          </div>
+                      </div>
+                    </div>  
+                </div>
+                <!-- <div id="on-this-page-container" class="tab on-this-page">
+                    <button class="tab-header on-this-page">On this page</button>
+                    <div class="tab-content">
+                        on this page
+                    </div>
+                </div> -->
+                <div id="translation-container" class="tab translation active">
+                    <button class="tab-header translation active">Translation</button>
+                    <div class="tab-content">
+                        <div class="lang">
+                          <div class="lang-header src-lang">
+                            <!-- <button class="lang-show">English</button> -->
+                          </div>
+                          <div class="icon-translate"></div>
+                          <div class="lang-header dist-lang">
+                            <!--dropdown html start-->
+                            <!-- <button class="lang-show">English</button> -->
+                            <!-- <div class="lang-dialog">
+                              <p class="show">English</p>
+                              <div class='search'>
+                                <input type="text" placeholder='Select Language' />
+                                <button class='search-btn'></button>
+                              </div>
+                              <div class="lang-dialog-scrollbar">
+                                <div class="lang-dialog-section recently-used">
+                                  <p class="title">Recently used</p>
+                                  <p class="select-lang">Chinese (Simplified)<button class="close"></button></p>
+                                  <p class="select-lang">French<button class="close"></button></p>
+                                </div>
+                                <div class="lang-dialog-section all-lang">
+                                  <p class="title">All</p>
+                                  <p class="select-lang" data-lang="jp">Japanese</p>
+                                  <p class="select-lang" data-lang="de">German</p>
+                                  <p class="select-lang" data-lang="en">English</p>
+                                  <p class="select-lang" data-lang="zh">Chinese</p>
+                                  <p class="select-lang" data-lang="ru">Russian</p>
+                                </div>
+                              </div>
+                            </div> -->
+                            <!--dropdown html start-->
+                          </div>
+                        </div>
+                        <div class="text">
+                          <div class="src text-area">
+                            <textarea name="src-text" placeholder="Translate..." id="translation-source"></textarea>
+                            <div class="toolbar">
+                              <button class="tool-icon broadcast none"></button>
+                              <button class="tool-icon record none"></button>
+                              <button class="tool-icon clear none"></button>
+                            </div>
+                            <button class="translate-btn none" id="translation-btn">Translate</button>
+                          </div>
+                          <div class="dist text-area">
+                            <div id="translation-target"></div>
+                          </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+    <script src='../src/lib/jquery.js'></script>
+    <script src='../src/js/const/api.js'></script>
+    <script src='../src/js/common.js'></script>
+    <script src='../src/js/popup.js'></script>
+</body>
+</html>

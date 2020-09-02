@@ -1,0 +1,316 @@
+html, body, .page {
+  background: #F3F3F3;
+  width: auto;
+  height: auto;
+}
+h1 {
+  height: 60px;
+  line-height: 60px;
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+  border-bottom: 1px solid #E2E2E2;
+}
+.content {
+  width: 600px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+.header {
+  height: 50px;
+  line-height: 30px;
+  padding: 10px 0;
+}
+.selection-all {
+  height: 48px;
+  position: relative;
+  visibility: hidden;
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  transform: scale(1,0);
+  -webkit-transform: scale(1,0);
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+}
+.select-mode .selection-all {
+  visibility: visible;
+  transform: scale(1,1);
+  -webkit-transform: scale(1,1);
+}
+.trans-list {
+  transition: padding-top .3s ease;
+  -webkit-transition: padding-top .3s ease;
+  padding-top: 0;
+}
+.no-data .trans-list::before {
+  content: 'no data';
+  display: block;
+  line-height: 40px;
+  text-align: center;
+}
+.select-mode .trans-list {
+  padding-top: 48px;
+}
+.selection-all .select-box {
+  top: 6px;
+  bottom: 6px;
+  height: 36px;
+  line-height: 36px;
+  text-align: right;
+  font-size: 14px;
+}
+.selection-all.selected .select-box::before,
+.selection-all.selected .select-box::after {
+  border-color: #40A6D2;
+}
+.selection-show {
+  display: inline-block;
+  padding-right: 26px;
+  font-size: 14px;
+  height: 30px;
+  position: relative;
+  color: #404040;
+}
+.selection-show::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style:solid;
+  border-width: 6px;
+  border-color: #404040 transparent transparent transparent;
+  top: 12px;
+  right: 2px;
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  transform-origin: 6px 3px;
+  -webkit-transform-origin: 6px 3px;
+}
+.selection.pop .selection-show::after {
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+}
+.selection {
+  position: relative;
+}
+.options .selection-title {
+  padding: 0 8px;
+}
+.selection .options {
+  box-shadow: 0 3px 6px rgba(0,0,0,.16);
+  top: -3px;
+  left: -16px;
+  right: -16px;
+  background: #fff;
+  z-index: 10;
+  position: absolute;
+  padding: 3px 8px 6px;
+  border-radius: 10px;
+  visibility: hidden;
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  opacity: 0;
+}
+.sort .options {
+  height: 104px;
+}
+.list .options {
+  height: 72px;
+}
+.selection.pop .options {
+  visibility: visible;
+  opacity: 1;
+}
+.option {
+  line-height: 24px;
+  padding: 0 8px;
+  margin-top: 8px;
+  border-radius: 6px;
+}
+.option:hover {
+  background: #F5F7FA;
+}
+.option:first-child {
+  margin-top: 0;
+}
+.option.active {
+  background: #d5f0ff;
+  color: #2E9ECF;
+}
+.content .header .tool span,
+.content .header .tool p,
+.content .header .tool div {  
+  font-size: 14px;
+  vertical-align: middle;
+}
+.tool > span,
+.options > p > span:first-child {
+  padding-right: 2px;
+  color: #727272;
+}
+.header .tool-left {
+  float: left;
+  width: 230px;
+}
+.header .tool-right {
+  float: right;
+  width: 250px;
+}
+.select-mode .tool-right {
+  width: 165px;
+}
+.tool-left, .tool-right {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  
+}
+.tool {  
+  cursor: pointer;
+}
+.tool.select {
+  padding-left: 24px;
+  position: relative;
+  width: 160px;
+}
+.tool.select.active {
+  width: 75px;
+}
+.tool.select::after {
+  content: 'Select Translation';
+}
+.tool.select.active::after {
+  content: 'Cancle';
+  color: #40A6D2;
+}
+.tool.select::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 30px;
+  background: url('../../res/images/edit.png') no-repeat center/16px 16px;
+}
+.tool.select.active::before {
+  background: url('../../res/images/close.png') no-repeat center/16px 16px;
+}
+.tool.move,.tool.delete,.tool.update {
+  width: 24px;
+  height: 30px;
+}
+.tool.move {
+  background: url('../../res/images/move.png') no-repeat center/16px 16px;
+}
+.tool.move.active {
+  background: url('../../res/images/move-active.png') no-repeat center/16px 16px;
+}
+.tool.delete {
+  background: url('../../res/images/delete.png') no-repeat center/16px 16px;
+}
+.tool.delete.active {
+  background: url('../../res/images/delete-active.png') no-repeat center/16px 16px;
+}
+.tool.update {
+  background: url('../../res/images/update.png') no-repeat center/16px 16px;
+}
+.trans-list {
+  border: 1px solid #E9E9E9;
+  border-radius: 10px;
+  background: #fff;
+  position: relative;
+}
+.trans-list li {
+  padding: 12px 12px 22px 16px;
+  border-bottom: 1px solid #E9E9E9;
+  line-height: 24px;
+  position: relative;
+}
+.trans-list li:last-child {
+  border: none;
+}
+.trans-list li .src {
+  color: #707070;
+}
+.trans-list li .dist {
+  color: #373737;
+  margin-top: 6px;
+}
+.trans-list li .dist.loading::after {
+  color: #ccc;
+  font-size: 13px;
+  line-height: 24px;
+  text-align: left;
+  height: 24px;
+  background-size: 13px 13px;
+  padding-left: 20px;
+}
+.trans-list li .time {
+  position: absolute;
+  font-size: 12px;
+  line-height: 20px;
+  right: 0;
+  bottom: 0;
+  width: 120px;
+  height: 20px;
+  text-align: center;
+  color: #ccc;
+}
+
+.trans-list li {
+  transition: padding-left .3s ease;
+  -webkit-transition: padding-left .3s ease;
+  overflow: hidden;
+}
+.select-mode .trans-list li {
+  padding-left: 64px;
+}
+.select-box {
+  position: absolute;
+  width: 40px;
+  top: 12px;
+  bottom: 22px;
+  left: 16px;
+  transition: transform .3s ease;
+  -webkit-transition: transform .3s ease;
+  transform: scale(0,1);
+  -webkit-transform: scale(0,1);
+  /* transform: translateX(-60px);
+  -webkit-transform: translateX(-60px); */
+  transform-origin: left center;
+  -webkit-transform-origin: left center;
+  cursor: pointer;
+}
+.select-mode .select-box {
+  transform: scale(1,1);
+  -webkit-transform: scale(1,1);
+  /* transform: translateX(0);
+  -webkit-transform: translateX(0); */
+}
+.select-box::before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 50%;
+  left: 11px;
+  margin-top: -9px;
+  border: 2px solid #9F9F9F;
+  border-radius: 3px;
+}
+.selected .select-box::after {
+  content: '';
+  width: 10px;
+  height: 6px;
+  border-left: 2px solid #9F9F9F;
+  border-bottom: 2px solid #9F9F9F;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  margin-top: -4.5px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
